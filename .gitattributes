@@ -1,17 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Text files use LF line endings in this repository
+*   text=auto
 
-# Custom for Visual Studio
-*.cs     diff=csharp
+# Except the dependencies, which we leave alone
+Godeps/**   -text=auto
 
-# Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+# Diffs on these files are meaningless
+gui.files.go    -diff
+*.svg           -diff
